@@ -12,7 +12,7 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - Nem hivatalos QPKG – fejlesztői mód szükséges a telepítéshez
 - [x] Az érvényes digitális aláírás nélküli alkalmazások telepítésének engedélyezése
 - Ez a csomag nem hivatalosan támogatott. A használatából eredő bármilyen kárért a fejlesztő nem vállal felelősséget
-- A program eltávolítás utána újra kell indítani a NAS készüléket
+- A program eltávolítása utána újra kell indítani a NAS készüléket
 
 ---
 ## Előkészület
@@ -25,15 +25,13 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - [x] Egyéb, nem rendszerszintű programok leállítása (App Center)
 - ![](/img/2.png)
 
-
-
-
-
 ---
 ## Előnyök
 ---
 
 - Gyorsabb memória kezelés (NVMe SSD akár 5× gyorsabb, mint a HDD)
+- 8GB swap fájl írás eredménye: `8589934592 bytes (8.0GB) copied, 52.075203 seconds, 157.3MB/s`
+- 16GB swap fájl írás eredménye: `17179869184 bytes (16.0GB) copied, 99.273097 seconds, 165.0MB/s`
 - Nagyobb rendelkezésre álló "virtuális memória"
 - Kevesebb lefagyás, OOM (Out of Memory) hiba
 - Csendesebb működés (kevesebb HDD használat)
@@ -51,8 +49,6 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - [x] Első kiadás
 - [ ] Ismert problémák
 
-![](/img/3.png)
-
 ---
 ## QSWAP telepítése és beállítása
 ---
@@ -60,6 +56,8 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - Formatáljuk EXT4 fájlrendszerként a(z) SSD/NVME meghajtót
 - Csatlakoztassuk az USB 3.0 interfészen keresztül a(z) SSD/NVME meghajtót
 - Az App Centerben manuálisan telepítsük a QSWAP programot
+
+![](/img/3.png)
 
 ---
 ## QSWAP működése és tulajdonsága
@@ -100,6 +98,8 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - `watch -n 2 free -m`
 - `df -h`
 - `fdisk -l`
+- `lsusb`
+- `udevadm info --query=all --name=/dev/sdb`
 
 **Ellenőrzés (Web UI):**
 
