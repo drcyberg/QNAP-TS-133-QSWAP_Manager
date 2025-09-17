@@ -23,7 +23,9 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - [x] OS: ≥ QTS 5.2.6
 - [x] Egyéb, nem rendszerszintű programok leállítása (App Center)
 
-![](/img/1.jpg)
+![](/img/1.png)
+
+![](/img/2.png)
 
 ---
 ## Előnyök
@@ -39,8 +41,6 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - Több fájlátvitel vagy torrent kliens aktív
 - Sok QNAP szolgáltatás (pl. indexelés, AI album, Qsirch) fut a háttérben
 - HDD életciklusának védelme
-
-![](/img/2.jpg)
 
 ---
 ## Kiadás: V0.1
@@ -73,6 +73,10 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - **Régi swap fájl (HDD):** `/share/CACHEDEV1_DATA/.swap/qnap_swap`
 - **Lock fájl:** `/var/lock/swap_setup.lck`
 
+![](/img/3.png)
+
+![](/img/5.png)
+
 ---
 ## Tipp
 ---
@@ -92,10 +96,12 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - `sysctl -a`
 - `ls /etc/config/`
 - `watch -n 2 free -m`
+- `df -h`
+- `fdisk -l`
 
 **Ellenőrzés (Web UI):**
 
-![](/img/2.jpg)
+![](/img/4.png)
 
 **Forrás:**
 
