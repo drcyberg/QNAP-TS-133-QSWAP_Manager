@@ -19,6 +19,9 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.2** inte
 ---
 
 - [x] Minőségi NVME/SSD meghajtó használata (nem pendrive)
+- ![](/img/7.png)
+- [x] Kompakt méretű NVME/SSD fém burkolatú ház
+- ![](/img/8.png)
 - [x] Az érvényes digitális aláírás nélküli alkalmazások telepítésének engedélyezése (App Center)
 - ![](/img/1.png)
 - [x] OS: ≥ QTS 5.2.6
