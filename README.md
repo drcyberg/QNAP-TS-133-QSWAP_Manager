@@ -1,14 +1,14 @@
 ## QNAP TS-133 NAS - QSWAP Manager alkalmazás
 ---
 
-Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** interfészen keresztül csatlakoztatott meghajtót használjunk swap (lapozási) területként a **[QNAP TS-133](https://www.qnap.com/hu-hu/product/ts-133)** NAS eszközön. Ez gyorsabb, kíméli a HDD-t, és növeli a rendszer stabilitását. Ez a megoldás különösen hasznos kis mennyiségű RAM-mal rendelkező modelleknél (≤ 2GB RAM). Alapértelmezés szerint a QNAP NAS a beépített HDD-n hozza létre a swap területet (`/share/CACHEDEV1_DATA/.swap/qnap_swap`), ami lassú, a rendszerlemezt terheli, írás intenzív műveletek esetén hátrányos lehet és kevésbé ideális, ha nagy mennyiségű RAM-ot helyettesítünk.
+Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.2** interfészen keresztül csatlakoztatott meghajtót használjunk swap (lapozási) területként a **[QNAP TS-133](https://www.qnap.com/hu-hu/product/ts-133)** NAS eszközön. Ez gyorsabb, kíméli a HDD-t, és növeli a rendszer stabilitását. Ez a megoldás különösen hasznos kis mennyiségű RAM-mal rendelkező modelleknél (≤ 2GB RAM). Alapértelmezés szerint a QNAP NAS a beépített HDD-n hozza létre a swap területet (`/share/CACHEDEV1_DATA/.swap/qnap_swap`), ami lassú, a rendszerlemezt terheli, írás intenzív műveletek esetén hátrányos lehet és kevésbé ideális, ha nagy mennyiségű RAM-ot helyettesítünk.
 
 ---
 ## Figyelmeztetés
 ---
 
 - A program használata saját felelősségre történik
-- Javasolt jó minőségű, gyors USB 3.0 meghajtót használni (pl. NVME, SSD)
+- Javasolt jó minőségű, gyors USB 3.2 meghajtót használni (pl. NVME, SSD)
 - Nem hivatalos QPKG – fejlesztői mód szükséges a telepítéshez
 - [x] Az érvényes digitális aláírás nélküli alkalmazások telepítésének engedélyezése
 - Ez a csomag nem hivatalosan támogatott. A használatából eredő bármilyen kárért a fejlesztő nem vállal felelősséget
@@ -54,7 +54,7 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 ---
 
 - Formatáljuk EXT4 fájlrendszerként a(z) SSD/NVME meghajtót
-- Csatlakoztassuk az USB 3.0 interfészen keresztül a(z) SSD/NVME meghajtót
+- Csatlakoztassuk az USB 3.2 interfészen keresztül a(z) SSD/NVME meghajtót
 - Az App Centerben manuálisan telepítsük a QSWAP programot
 
 ![](/img/3.png)
@@ -66,12 +66,12 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - **Változatok:** 8GB (8GB_QSWAP_0.1.qpkg), és 16GB (16GB_QSWAP_0.1.qpkg) swap tárterület beállítással érhető el
 - **swap_check.sh:** 5 percenként ellenőrzi (`crontab`), hogy a swap tárterület be van-e állítva. Esetleges meghajtó cserekor automatikusan beállítja.
 - **swap_setup.sh:** Fő program. Az App Centerből irányítható. **start-stop** funkció, valamint CLI-n keresztül a **restore** funkció is aktiválható.
-- **Start funkció:** QNAP swap meghajtó leállítása és törlése (`/share/CACHEDEV1_DATA/.swap/qnap_swap`) ---> USB 3.0 interfészen csatlakoztatott meghajtón `swapfile` beállítása ---> Lock fájl (szkript ellenőrzés) létrehozása (`/var/lock/swap_setup.lck`) ---> egyéb finomhangolások elvgézése (`vm.swappiness=10, vm.vfs_cache_pressure=50, vm.dirty_ratio=10, vm.dirty_background_ratio=5, vm.min_free_kbytes=65536`) ---> Crontab beállítása ---> naplófájl kiíratása hangjelzéssel (`/var/log/swap_setup_log.txt`)
-- **Stop funkció:** USB 3.0 interfészen csatlakoztatott meghajtón `swapfile` törlése ---> Lock fájl (szkript ellenőrzés) törlése (`/var/lock/swap_setup.lck`) ---> Crontab visszaállítása ---> naplófájl kiíratása hangjelzéssel (`/var/log/swap_setup_log.txt`)
+- **Start funkció:** QNAP swap meghajtó leállítása és törlése (`/share/CACHEDEV1_DATA/.swap/qnap_swap`) ---> USB 3.2 interfészen csatlakoztatott meghajtón `swapfile` beállítása ---> Lock fájl (szkript ellenőrzés) létrehozása (`/var/lock/swap_setup.lck`) ---> egyéb finomhangolások elvgézése (`vm.swappiness=10, vm.vfs_cache_pressure=50, vm.dirty_ratio=10, vm.dirty_background_ratio=5, vm.min_free_kbytes=65536`) ---> Crontab beállítása ---> naplófájl kiíratása hangjelzéssel (`/var/log/swap_setup_log.txt`)
+- **Stop funkció:** USB 3.2 interfészen csatlakoztatott meghajtón `swapfile` törlése ---> Lock fájl (szkript ellenőrzés) törlése (`/var/lock/swap_setup.lck`) ---> Crontab visszaállítása ---> naplófájl kiíratása hangjelzéssel (`/var/log/swap_setup_log.txt`)
 - **Restore funkció:** Mindent visszaállít az eredeti állapotba (újraindításig)
 - **Napló fájl:** `/var/log/swap_setup_log.txt`
 - **Crontab fájl:** `/etc/config/crontab`
-- **Új swap fájl (USB 3.0):** `/share/external/DEV3302_1/swapfile`
+- **Új swap fájl (USB 3.2):** `/share/external/DEV3302_1/swapfile`
 - **Régi swap fájl (HDD):** `/share/CACHEDEV1_DATA/.swap/qnap_swap`
 - **Lock fájl:** `/var/lock/swap_setup.lck`
 
