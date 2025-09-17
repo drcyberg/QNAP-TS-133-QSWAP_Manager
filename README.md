@@ -105,6 +105,8 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 
 ![](/img/4.png)
 
+![](/img/6.png)
+
 **Forrás:**
 
 - QPKG Development Guidelines: [LINK](https://wiki.qnap.com/wiki/QPKG_Development_Guidelines)
