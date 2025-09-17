@@ -20,12 +20,14 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 
 - [x] Minőségi NVME/SSD meghajtó használata (nem pendrive)
 - [x] Az érvényes digitális aláírás nélküli alkalmazások telepítésének engedélyezése (App Center)
+- ![](/img/1.png)
 - [x] OS: ≥ QTS 5.2.6
 - [x] Egyéb, nem rendszerszintű programok leállítása (App Center)
+- ![](/img/2.png)
 
-![](/img/1.png)
 
-![](/img/2.png)
+
+
 
 ---
 ## Előnyök
@@ -48,6 +50,8 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 
 - [x] Első kiadás
 - [ ] Ismert problémák
+
+![](/img/3.png)
 
 ---
 ## QSWAP telepítése és beállítása
@@ -72,8 +76,6 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 - **Új swap fájl (USB 3.0):** `/share/external/DEV3302_1/swapfile`
 - **Régi swap fájl (HDD):** `/share/CACHEDEV1_DATA/.swap/qnap_swap`
 - **Lock fájl:** `/var/lock/swap_setup.lck`
-
-![](/img/3.png)
 
 ![](/img/5.png)
 
@@ -105,4 +107,7 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.0** inte
 
 **Forrás:**
 
-- QPKG Development Guidelines: [LINK]([https://timestampgenerator.com/generate-hash/sha1](https://wiki.qnap.com/wiki/QPKG_Development_Guidelines)
+- QPKG Development Guidelines: [LINK](https://wiki.qnap.com/wiki/QPKG_Development_Guidelines)
+- App Center: [LINK](https://www.xeams.com/remove-apps-qnap.htm)
+- Scripting: [LINK](https://forum.qnapclub.de/thread/45028-script-autorun-sh-erstellen-von-start-und-stopp-scripten/)
+- Crontab: [LINK](https://www.qnap.com/en/how-to/faq/article/how-to-add-jobs-to-crontab-to-schedule-a-job)
