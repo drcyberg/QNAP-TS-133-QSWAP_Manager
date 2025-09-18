@@ -77,6 +77,7 @@ Ez a **QSWAP Manager** (QPKG csomag) lehetővé teszi, hogy egy **USB 3.2** inte
 - **Új swap fájl (USB 3.2):** `/share/external/DEV3302_1/swapfile`
 - **Régi swap fájl (HDD):** `/share/CACHEDEV1_DATA/.swap/qnap_swap`
 - **Lock fájl:** `/var/lock/swap_setup.lck`
+- **QSWAP program:** `/share/CACHEDEV1_DATA/.qpkg/QSWAP`
 
 ![](/img/5.png)
 
